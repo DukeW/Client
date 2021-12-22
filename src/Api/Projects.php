@@ -1046,6 +1046,17 @@ class Projects extends AbstractApi
     {
         return $this->post($this->getProjectPath($project_id, 'uploads'), [], [], ['file' => $file]);
     }
+    
+    /**
+     * @param int|string $project_id
+     * @param string     $file
+     *
+     * @return mixed
+     */
+    public function uploadAvatar($project_id, string $file)
+    {
+        return $this->put($this->getProjectPath($project_id,""),[],[],['avatar'=>$file]);
+    }
 
     /**
      * @param int|string $project_id
