@@ -1046,7 +1046,7 @@ class Projects extends AbstractApi
     {
         return $this->post($this->getProjectPath($project_id, 'uploads'), [], [], ['file' => $file]);
     }
-    
+
     /**
      * @param int|string $project_id
      * @param string     $file
